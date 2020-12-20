@@ -49,6 +49,18 @@ class Database ():
 
         > bdd = Database('monUser', 'monMotDePasse', 'localhost', 'databaseV1')
         > bdd.select(table='nomTable', column='nom, age')
+
+        Le .format() permet d'insérer des variables dans une chaine de caractères
+        ville_depart = 'Brest'
+        ville_arrive = 'Paris'
+
+        phrase = "Demain, je prends le train de {depart} en direction de {arrive}".format(
+            depart=ville_depart,
+            arrive=ville_arrive
+        )
+
+        phrase vaudra alors
+        "Demain, je prends le train de Brest en direction de Paris"
     '''
     def select (self, table, columns):
         request = "SELECT {columns} FROM {table}".format(
